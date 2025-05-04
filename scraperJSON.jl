@@ -2,7 +2,7 @@ using HTTP, JSON3
 
 function saferm()
     try
-        rm("prices.JSON")
+        rm("prices.json")
     catch e
         @warn "Failed to delete $path: $e"
     end
@@ -49,7 +49,7 @@ end
 
 function JSON_writer()
     # Open file for writing
-    file = open("prices.JSON", "w")
+    file = open("prices.json", "w")
     
     # Start the JSON object
     write(file, "{\n")
